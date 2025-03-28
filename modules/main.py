@@ -6,8 +6,6 @@ import time
 import asyncio
 import requests
 import subprocess
-import logging
-import tgcrypto
 
 import core as helper
 from utils import progress_bar
@@ -17,18 +15,13 @@ from pyromod import listen
 from subprocess import getstatusoutput
 from aiohttp import web
 from pyrogram import Client, filters
-from pyrogram.enums import ChatMemberStatus, ChatMemberFilter
-from pyrogram import enums
-from pyrogram.types1 import ChatMember
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
-from pyrogram import enums
 
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from downloader import download_handler, get_link_atributes
-from tglogging import TelegramLogHandler 
 # Initialize the bot
 bot = Client(
     "bot",
